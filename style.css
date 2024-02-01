@@ -1,0 +1,103 @@
+@font-face {
+  font-family: apple;
+  src: url(./font/NeueHaasDisplayMediu.ttf);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: apple;
+}
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+#container {
+  height: 100%;
+  width: 100%;
+  background-color: white;
+}
+nav {
+  height: 100px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0px 40px;
+}
+.fNav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.fNav h3 {
+  font-size: 17px;
+  border: 1.5px solid black;
+  padding: 5px 8px;
+  border-radius: 50px;
+  font-weight: 500;
+}
+.fNav i {
+  font-size: 16px;
+  border: 1.5px solid black;
+  padding: 5px 8px;
+  border-radius: 50px;
+  font-weight: 500;
+}
+.mNav h1 {
+  font-size: 22px;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+.lNav button {
+  padding: 7px 12px;
+  border: 1.5px solid #000;
+  border-radius: 15px;
+  font-size: 16px;
+  font-weight: 600;
+  background-color: #fff;
+}
+.lNav button:last-child {
+  background-color: orangered;
+  border: none;
+  color: #fff;
+}
+#container > h1 {
+  /* color: red; */
+  font-size: 150px;
+  text-transform: uppercase;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  text-align: center;
+}
+#container img {
+  height: 400px;
+  width: 350px;
+  object-fit: cover;
+  position: absolute;
+  border-radius: 20px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+#container > #img1 {
+  transform: translate(-50%, -50%) rotate(-30deg);
+}
+#container > #img2 {
+  transform: translate(-50%, -50%) rotate(-20deg);
+}
+
+#container > #img3 {
+  transform: translate(-50%, -50%) rotate(-10deg);
+}
+
+#btm__left {
+  position: absolute;
+  bottom: 5%;
+  left: 3%;
+  font-size: 12px;
+}
