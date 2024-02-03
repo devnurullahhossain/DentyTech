@@ -17,6 +17,7 @@ body {
   height: 100%;
   width: 100%;
   background-color: white;
+  position: relative;
 }
 nav {
   height: 100px;
@@ -56,12 +57,35 @@ nav {
   border-radius: 15px;
   font-size: 16px;
   font-weight: 600;
+  text-align: center;
   background-color: #fff;
+  cursor: pointer;
 }
-.lNav button:last-child {
+.lNav #animate {
   background-color: orangered;
   border: none;
   color: #fff;
+  position: relative;
+  overflow: hidden;
+  transition-duration: 0.4s;
+}
+#animate::after {
+  content: "";
+  background: #09ee90;
+  display: block;
+  position: absolute;
+  padding-top: 300%;
+  padding-left: 350%;
+  margin-left: -20px !important;
+  margin-top: -120%;
+  opacity: 0;
+  transition: all 0.8s;
+}
+#animate:active::after {
+  padding: 0;
+  margin: 0;
+  opacity: 1;
+  transition: 0s;
 }
 #container > h1 {
   /* color: red; */
@@ -100,4 +124,47 @@ nav {
   bottom: 5%;
   left: 3%;
   font-size: 12px;
+}
+
+.sidenav {
+  position: absolute;
+  top: 25%;
+  z-index: 1;
+}
+/* Style the links inside the sidenav */
+#mySidenav a {
+  position: absolute; /* Position them relative to the browser window */
+  left: -80px; /* Position them outside of the screen */
+  transition: 0.3s; /* Add transition on hover */
+  padding: 15px; /* 15px padding */
+  width: 100px; /* Set a specific width */
+  text-decoration: none; /* Remove underline */
+  font-size: 17px; /* Increase font size */
+  color: white; /* White text color */
+  border-radius: 0 5px 5px 0; /* Rounded corners on the top right and bottom right side */
+}
+
+#mySidenav a:hover {
+  left: 0; /* On mouse-over, make the elements appear as they should */
+}
+
+/* The about link: 20px from the top with a green background */
+#about {
+  top: 20px;
+  background-color: #316ff6;
+}
+
+#blog {
+  top: 80px;
+ background: linear-gradient(to right, #405DE6, #833AB4, #FD1D1D);
+}
+
+#projects {
+  top: 140px;
+  background-color: #0a66c2; /* Red */
+}
+
+#contact {
+  top: 200px;
+  background-color: #555; /* Light Black */
 }
